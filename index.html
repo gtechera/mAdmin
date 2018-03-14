@@ -13,7 +13,7 @@
   <title>Materialize Admin Dashboard</title>
 </head>
 
-<body>
+<body class="grey lighten-4">
   <nav class="blue darken-2">
     <div class="container">
       <div class="nav-wrapper">
@@ -138,7 +138,240 @@
     </div>
   </section>
 
-  <!-- Preloader -->
+  <!-- Section: Visitors-->
+  <section class="section section-visitors blue lighten-4">
+    <div class="row">
+      <div class="col s12 m6 l8">
+        <div class="card-panel">
+          <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <!-- Latest comments -->
+        <ul class="collection with-header latest-comments">
+          <li class="collection-header">
+            <h5>Latest Comments</h5>
+          </li>
+          <li class="collection-item avatar">
+            <img src="img/person1.jpg" alt="" class="circle">
+            <span class="title">John Doe</span>
+            <p class="truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ab accusamus quibusdam qui sunt consequuntur, recusandae
+              earum dignissimos blanditiis, deserunt quis ratione reiciendis odio doloribus expedita incidunt perspiciatis
+              magni dicta.</p>
+            <a href="#" class="approve green-text">Approve</a> |
+            <a href="#" class="deny red-text">Deny</a>
+          </li>
+          <li class="collection-item avatar">
+            <img src="img/person2.jpg" alt="" class="circle">
+            <span class="title">Steve Smith</span>
+            <p class="truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ab accusamus quibusdam qui sunt consequuntur, recusandae
+              earum dignissimos blanditiis, deserunt quis ratione reiciendis odio doloribus expedita incidunt perspiciatis
+              magni dicta.</p>
+            <a href="#" class="approve green-text">Approve</a> |
+            <a href="#" class="deny red-text">Deny</a>
+          </li>
+          <li class="collection-item avatar">
+            <img src="img/person3.jpg" alt="" class="circle">
+            <span class="title">Helen Williams</span>
+            <p class="truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ab accusamus quibusdam qui sunt consequuntur, recusandae
+              earum dignissimos blanditiis, deserunt quis ratione reiciendis odio doloribus expedita incidunt perspiciatis
+              magni dicta.</p>
+            <a href="#" class="approve green-text">Approve</a> |
+            <a href="#" class="deny red-text">Deny</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Recent posts -->
+  <section class="section section-recent-posts">
+    <div class="row">
+      <div class="col s12 m6 l8">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Recent Posts</span>
+            <table class="striped">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Category</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Post 1</td>
+                  <td>Web Development</td>
+                  <td>
+                    <a href="details.html" class="btn blue darken-2">Details</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Post 2</td>
+                  <td>Graphic Design</td>
+                  <td>
+                    <a href="details.html" class="btn blue darken-2">Details</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Post 3</td>
+                  <td>Web Development</td>
+                  <td>
+                    <a href="details.html" class="btn blue darken-2">Details</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Quick Todos</span>
+            <form id="todo-form">
+              <div class="input-field">
+                <input id="todo" type="text" placeholder="Add Todo...">
+              </div>
+            </form>
+            <ul class="collection todos">
+              <li class="collection-item">
+                <div>Todo One
+                  <a href="#!" class="secondary-content delete">
+                    <i class="material-icons red-text">close</i>
+                  </a>
+                </div>
+              </li>
+              <li class="collection-item">
+                <div>Todo Two
+                  <a href="#!" class="secondary-content delete">
+                    <i class="material-icons red-text">close</i>
+                  </a>
+                </div>
+              </li>
+              <li class="collection-item">
+                <div>Todo Three
+                  <a href="#!" class="secondary-content delete">
+                    <i class="material-icons red-text">close</i>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="section blue darken-2 center white-text">
+    <p>MAdmin Panel Copyright &copy; 2018</p>
+  </footer>
+
+  <!-- Fixed action button -->
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large red">
+      <i class="material-icons">add</i>
+    </a>
+    <ul>
+      <li>
+        <a href="#post-modal" class="btn-floating blue modal-trigger">
+          <i class="material-icons">mode_edit</i>
+        </a>
+      </li>
+      <li>
+        <a href="#category-modal" class="btn-floating blue modal-trigger">
+          <i class="material-icons">folder</i>
+        </a>
+      </li>
+      <li>
+        <a href="#user-modal" class="btn-floating blue modal-trigger">
+          <i class="material-icons">supervisor_account</i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Modals -->
+
+  <!-- Post Modal -->
+  <div id="post-modal" class="modal">
+    <div class="modal-content">
+      <h4>Add Post</h4>
+      <form>
+        <div class="input-field">
+          <input type="text" id="title">
+          <label for="title">Title</label>
+        </div>
+        <div class="input-field">
+          <select>
+            <option value="" disabled selected>Select Options</option>
+            <option value="1">Web Development</option>
+            <option value="2">Graphic Design</option>
+            <option value="3">Tech Gadgets</option>
+            <option value="4">Other</option>
+          </select>
+          <label>Category</label>
+        </div>
+        <div class="input-field">
+          <textarea name="body" id="body" class="materialize-textarea"></textarea>
+          <label for="body"></label>
+        </div>
+      </form>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close btn blue white-text">Submit</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Category Modal -->
+  <div id="category-modal" class="modal">
+    <div class="modal-content">
+      <h4>Add Category</h4>
+      <form>
+        <div class="input-field">
+          <input type="text" id="title">
+          <label for="title">Title</label>
+        </div>
+      </form>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close btn blue white-text">Submit</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- User Modal -->
+  <div id="user-modal" class="modal">
+    <div class="modal-content">
+      <h4>Add User</h4>
+      <form>
+        <div class="input-field">
+          <input type="text" id="name">
+          <label for="name">Name</label>
+        </div>
+        <div class="input-field">
+          <input type="email" id="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="password">
+          <label for="password">Password</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="password2">
+          <label for="password2">Confirm Password</label>
+        </div>
+
+      </form>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close btn blue white-text">Submit</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Preloader (siempre abajo del todo) -->
 
   <div class="preloader-wrapper big active loader">
     <div class="spinner-layer spinner-blue-only">
@@ -154,10 +387,20 @@
     </div>
   </div>
 
+
+
+
+
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script type="text/javascript" src="js/chart.js"></script>
+  <script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
+
   <script>
+
+
     //Hide Sections
     $('.section').hide();
 
@@ -186,7 +429,48 @@
 
             });
         });
+
+        //Comments Approve & Deny
+        $('.approve').click(function (event) {
+          Materialize.toast('Comment Approved', 3000);
+          event.preventDefault();
+        });
+
+        $('.deny').click(function (event) {
+          Materialize.toast('Comment Deny', 3000);
+          event.preventDefault();
+        });
       });
+
+      //Quick todos
+      $('#todo-form').submit(function (event) {
+        const output = `<li class="collection-item">
+                <div>${$('#todo').val()}
+                  <a href="#!" class="secondary-content delete">
+                    <i class="material-icons red-text">close</i>
+                  </a>
+                </div>
+              </li>`;
+        $('.todos').append(output);
+        Materialize.toast('Todo Added', 3000);
+        event.preventDefault();
+      });
+
+      //Delete Todos
+      $('.todos').on('click', '.delete', function (event) {
+        $(this).parent().parent().remove();
+        Materialize.toast('Todo Removed', 1000);
+        e.preventDefault();
+      });
+
+      //INIT Modal
+      $('.modal').modal();
+
+      //INIT Select
+      $('select').material_select();
+
+      //CKEditor
+      CKEDITOR.replace('body');
 
     }, 1000);
 
